@@ -702,6 +702,15 @@ p {
     .slider{
         width: 400px;
     }
+    .slider-container{
+        padding:20px 0;
+    }
+    .slider-container h1{
+        margin-bottom: 10px;
+    }
+
+
+
 
     /* ---footer----- */
 
