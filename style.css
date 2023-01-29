@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 :root {
@@ -24,20 +26,24 @@ body {
 
 
 
-a {
+a{
     text-decoration: none;
     display: inline-block;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
 ul {
     list-style: none;
+
 }
 
 /* -----------utility classes--------------- */
 
 .container {
     overflow: hidden;
-    position:relative;
+    position: relative;
 
 }
 
@@ -48,18 +54,6 @@ ul {
 .hover-link:hover {
     color: var(--btn-color);
     transition: color 0.2s;
-}
-
-.primary-button {
-    background-color: var(--btn-color);
-    border-radius: 6px;
-    font-weight: 600;
-    color: white !important;
-    padding: 12px 24px;
-    text-align: center;
-    box-sizing: 0 0 2px var(--secondary-text-color);
-    transition: 0.2s ease-out;
-
 }
 
 h1 {
@@ -83,7 +77,7 @@ p {
     align-items: center;
     justify-content: space-between;
     background-color: var(--offwhite-background-color);
-    padding: 10px 40px;
+    padding: 10px 80px;
     /* position:fixed;
     right: 0;
     left: 0;
@@ -94,13 +88,17 @@ p {
 .navlinks {
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
 }
 
-.arrow {
-    margin-left: 2px;
+.navlinks a {
+    color: black;
+    font-weight: 500;
 }
 
+.home-hover-button {
+    pointer-events: none;
+}
 
 
 
@@ -108,7 +106,7 @@ p {
 .header {
     margin-top: 30px;
     color: black;
-    padding-left:100px;
+    padding-left: 100px;
 }
 
 .header h1 {
@@ -132,22 +130,26 @@ p {
     width: 600px;
 }
 
-.download-btns{
+.download-btns {
     align-items: center;
     margin-top: 60px;
     margin-left: -10px;
 }
-.playstore-btn img{
+
+.playstore-btn img {
     width: 200px;
 }
-.playstore-btn:hover{
+
+.playstore-btn:hover {
     scale: 0.95;
     transition: scale 0.2s;
 }
-.appstore-btn img{
+
+.appstore-btn img {
     width: 179px;
 }
-.appstore-btn:hover{
+
+.appstore-btn:hover {
     scale: 0.95;
     transition: scale 0.2s;
 }
@@ -204,13 +206,15 @@ p {
     padding: 20px 40px;
 } */
 
-.cashback-section-image img{
+.cashback-section-image img {
     width: 600px;
 }
-.cashback-section-image{
+
+.cashback-section-image {
     margin-right: 100px;
 }
-.cashback-text p{
+
+.cashback-text p {
     font-size: 1.2rem;
     max-width: 500px;
     margin-top: 60px;
@@ -261,10 +265,12 @@ p {
     justify-content: center;
 
 }
-.payment-section-logo .card{
+
+.payment-section-logo .card {
     text-align: center;
 }
-.payment-card{
+
+.payment-card {
     width: 250px;
     background-color: var(--offwhite-background-color);
     text-align: center;
@@ -275,17 +281,21 @@ p {
     padding: 15px 0;
 
 }
-.payment-card p{
+
+.payment-card p {
     font-size: 18px;
 }
-.card-two{
+
+.card-two {
     margin-left: 20px;
 }
-.card-three{
+
+.card-three {
     margin-left: 20px;
 
 }
-.payment-card:hover{
+
+.payment-card:hover {
     background-color: var(--btn-color);
     color: white;
     transition: background-color 0.2s, color 0.2s;
@@ -293,23 +303,25 @@ p {
 }
 
 
-.payment-method-logos img{
+.payment-method-logos img {
     width: 100px;
 }
-.payment-method-logos{
+
+.payment-method-logos {
     display: flex;
     gap: 50px;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.payment-text{
+.payment-text {
     text-align: center;
     margin-bottom: 80px;
     color: black;
 }
-.payment-part{
+
+.payment-part {
     padding: 100px 0;
     margin-bottom: 100px;
     /* background-image: url(./images/asset\ 34.svg);
@@ -318,7 +330,8 @@ p {
 
 
 }
-.logo:hover{
+
+.logo:hover {
     scale: 0.8;
     transition: scale 0.3s;
 }
@@ -328,11 +341,12 @@ p {
 
 
 
-.deal-section-container{
+.deal-section-container {
     margin-top: 30px;
     margin-bottom: 150px;
 }
-.deal-section{
+
+.deal-section {
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 80px;
@@ -340,7 +354,8 @@ p {
     margin-top: 100px;
 
 }
-.deal-cards{
+
+.deal-cards {
     flex-direction: column;
     width: 30%;
     height: auto;
@@ -352,15 +367,16 @@ p {
     gap: 20px;
 }
 
-.deal-section-text{
+.deal-section-text {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.deal-cards img{
+.deal-cards img {
     width: 100px;
 }
-.deal-cards img:hover{
+
+.deal-cards img:hover {
     scale: 1.1;
     opacity: 0.8;
     transition: scale 0.3s, opacity 0.3s;
@@ -369,7 +385,7 @@ p {
 
 /* ---review section------- */
 
-/* .review-section{
+.review-section {
     background-color: var(--offwhite-background-color);
     height: 800px;
     flex-direction: column;
@@ -377,42 +393,75 @@ p {
     justify-content: center;
 }
 
-.review-section-images img{
+.review-section-images img {
     width: 400px;
     padding: 10px;
 }
 
-.review-section-images{
+.review-section-images {
     gap: 30px;
     margin-top: 60px;
 }
-.review-card{
+
+.review-card {
     background-color: white;
     border-radius: 10px;
 }
-.reviewcard-one:hover{
+
+.reviewcard-one:hover {
     scale: 1.08;
-    transition:scale 0.3s;
+    transition: scale 0.3s;
     cursor: pointer;
 }
-.reviewcard-two:hover{
+
+.reviewcard-two:hover {
     scale: 1.08;
-    transition:scale 0.3s;
+    transition: scale 0.3s;
     cursor: pointer;
 }
-.reviewcard-three:hover{
+
+.reviewcard-three:hover {
     scale: 1.08;
-    transition:scale 0.3s;
+    transition: scale 0.3s;
     cursor: pointer;
 }
-.review-section-bottom-text{
+
+.review-section-bottom {
     margin-top: 80px;
     font-size: 1.6rem;
     color: var(--btn-color);
-} */
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-section-download-button {
+    width: 30px;
+    padding: 30px;
+    border-radius: 80px;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 10px 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-section-download-button p {
+    font-size: 20px;
+    color: black;
+}
+
+.review-section-download-button img {
+    width: 20px;
+
+}
+
+.review-section-download-button:hover {
+    cursor: pointer;
+}
 
 
-
+/* 
 .slider-container{
     padding: 50px 0;
 }
@@ -472,7 +521,7 @@ p {
     100%{
         left: -300%;
     }
-}
+} */
 
 
 
@@ -481,39 +530,43 @@ p {
 
 /* ----footer------ */
 
-.footer-container{
+.footer-container {
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--background-color);
     padding: 30px 120px;
 }
-.footer-container p{
+
+.footer-container p {
     font-size: 1rem;
     font-weight: 500;
 
 }
-.footer-container a{
+
+.footer-container a {
     color: white;
 }
-.twickmedia{
+
+.twickmedia {
     color: white;
 }
-.footer-links{
+
+.footer-links {
     gap: 70px;
 }
 
 
 
-.social-media-links{
+.social-media-links {
     gap: 30px;
     align-items: center;
     justify-content: center;
 }
 
-.line{
+.line {
     height: 3px;
     width: 100%;
-    margin:80px 0;
+    margin: 80px 0;
     background-color: var(--offwhite-background-color);
 }
 
@@ -526,8 +579,7 @@ p {
 
 
 
-@media screen and ( max-width: 479px)
-{
+@media screen and (max-width: 479px) {
 
     /* .line{
         height: 3px;
@@ -535,14 +587,15 @@ p {
         margin:80px 0;
         background-color: var(--offwhite-background-color);
     } */
-    
-    
-    h1{
+
+
+    h1 {
         font-size: 1.6rem;
         line-height: 2.3rem;
 
     }
-    p{
+
+    p {
         font-size: 1rem;
 
     }
@@ -550,43 +603,51 @@ p {
 
     /* navbar---- */
 
-    .company-logo img{
+    .company-logo img {
         width: 130px;
     }
-    .navbar{
-        padding: 10px 20px 10px 13px;
+
+    .navbar {
+        padding: 10px 33px 10px 25px;
         font-size: 14px;
     }
-    .primary-button{
+
+    .primary-button {
         border-radius: 10px;
     }
-    .home{
-        display: none;
+
+    .navlinks {
+        gap: 30px;
     }
 
-    
+
+
 
     /* ----header------ */
 
 
-    .header-text h1{
+    .header-text h1 {
         text-align: center;
 
     }
 
-    .header-text p{
+    .header-text p {
         text-align: center;
     }
-    .playstore-btn img{
+
+    .playstore-btn img {
         width: 125px;
     }
-    .appstore-btn img{
+
+    .appstore-btn img {
         width: 110px;
     }
-    .download-btns{
+
+    .download-btns {
         margin-top: 0;
     }
-    .header-text{
+
+    .header-text {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -594,85 +655,95 @@ p {
         justify-content: center;
         margin: 0;
     }
-    .header{
+
+    .header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0;
         padding: 0px 20px;
         flex-direction: column-reverse;
-    
+
     }
-    .header-image img{
+
+    .header-image img {
         width: 450px;
     }
 
-   
+
 
 
     /* ------cashback------- */
 
-    .cashback-text{
+    .cashback-text {
         text-align: center;
         min-width: 80%;
     }
-   
-    .cashback-section{
+
+    .cashback-section {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 50px 0;
     }
-    .cashback-section-image img{
+
+    .cashback-section-image img {
         width: 400px;
         margin-left: 100px;
     }
-   
+
 
 
     /* -------payment section--------- */
 
-    .payment-method-logos{
+    .payment-method-logos {
         flex-wrap: wrap;
         padding: 0px 10px;
         gap: 30px;
     }
-    .payment-method-logos img{
+
+    .payment-method-logos img {
         width: 70px;
     }
-    .payment-part{
+
+    .payment-part {
         margin: 0;
         padding: 70px 0 100px 0;
     }
-    .payment-text{
+
+    .payment-text {
         margin: 40px;
     }
-  
+
 
 
 
     /* ---deal section--- */
 
 
-    .deal-section-container{
+    .deal-section-container {
         margin: 0;
         margin-bottom: 30px;
     }
-    .deal-section{
+
+    .deal-section {
         column-gap: 25px;
         row-gap: 40px;
         padding: 0px 20px 40px 20px;
         margin: 40px;
     }
-    .deal-cards img{
+
+    .deal-cards img {
         width: 80px;
     }
-    .deal-cards{
+
+    .deal-cards {
         max-width: 25%;
         row-gap: 20px;
         justify-content: start;
     }
-    .deal-cards p{
+
+    .deal-cards p {
         font-size: 12px;
     }
 
@@ -680,26 +751,33 @@ p {
     /* ----review section--------- */
 
 
-    /* .review-section{
+    .review-section {
         height: 1100px;
     }
 
-    .review-section-images{
+    .review-section-images {
         flex-direction: column;
     }
-    .review-section-images img{
+
+    .review-section-images img {
         width: 350px;
         padding: 10px;
     }
-    
-    .review-section-bottom-text h2{
-        font-size: 1.2rem;
-        
-    } */
+
+    .review-section-bottom h2 {
+        font-size: 1.4rem;
+
+    }
+
+    .review-section-bottom {
+        flex-direction: column;
+        gap: 30px;
+        margin: 50px 0px 30px 0;
+    }
 
 
 
-    .slider{
+    /* .slider{
         width: 400px;
     }
     .slider-container{
@@ -708,26 +786,26 @@ p {
     .slider-container h1{
         margin-bottom: 10px;
     }
-
+ */
 
 
 
     /* ---footer----- */
 
-   .footer-container{
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px 10px;
-    text-align: center;
-   }
-   .footer-container a{
-    font-size: 14px;
-   }
-   .footer-links{
-    gap:40px;
-   }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 10px;
+        text-align: center;
+    }
 
-  
+    .footer-container a {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+
+
 }
-
- 
