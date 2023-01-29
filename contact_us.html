@@ -31,21 +31,23 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        ul {
-            list-style: none;
-
-        }
-
+        
         a {
             text-decoration: none;
             display: inline-block;
             border: none;
             cursor: pointer;
             outline: none;
-
+            -webkit-tap-highlight-color:transparent;
+        }
+        a:active{
+            color: var(--btn-color);
+        }
+        ul {
+            list-style: none;
 
         }
-
+        
         h1 {
             font-size: 5rem;
             margin-bottom: 30px;
@@ -112,9 +114,9 @@
         }
 
         .hover-link:hover {
-            color: var(--btn-color);
-            transition: color 0.2s;
-        }
+    color: rgb(112, 112, 112);
+    transition: color 0.2s;
+}
 
 
         /* --------------nav bar------------ */
@@ -124,9 +126,9 @@
 
         .navbar {
             align-items: center;
-            justify-content: space-between;
             background-color: var(--offwhite-background-color);
             padding: 10px 80px;
+            gap: 950px;
         }
 
 
@@ -141,13 +143,11 @@
             font-weight: 500;
         }
 
-        .contact-us-hover-button {
-            pointer-events: none;
-        }
 
 
         /* -----media queries---------- */
         @media screen and (max-width:479px) {
+
 
 
             h1 {
@@ -181,6 +181,8 @@
             .navbar {
                 padding: 10px 33px 10px 25px;
                 font-size: 14px;
+    gap: 90px;
+
             }
 
             .primary-button {
@@ -213,7 +215,7 @@
             <div>
                 <ul class="navlinks flex">
                     <li><a href="index.html" class="hover-link">Home</a></li>
-                    <li><a href="#" class="hover-link contact-us-hover-button">Contact Us</i></a></li>
+                    <li><a href="#" class="hover-link contact-us-hover-button" style="color:var(--btn-color);">Contact Us</i></a></li>
                 </ul>
             </div>
         </div>
