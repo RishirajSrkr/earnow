@@ -19,6 +19,10 @@
             --offwhite-background-color: #F9F9FB;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -31,23 +35,25 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        
+
         a {
             text-decoration: none;
             display: inline-block;
             border: none;
             cursor: pointer;
             outline: none;
-            -webkit-tap-highlight-color:transparent;
+            -webkit-tap-highlight-color: transparent;
         }
-        a:active{
+
+        a:active {
             color: var(--btn-color);
         }
+
         ul {
             list-style: none;
 
         }
-        
+
         h1 {
             font-size: 5rem;
             margin-bottom: 30px;
@@ -114,9 +120,9 @@
         }
 
         .hover-link:hover {
-    color: rgb(112, 112, 112);
-    transition: color 0.2s;
-}
+            color: rgb(112, 112, 112);
+            transition: color 0.2s;
+        }
 
 
         /* --------------nav bar------------ */
@@ -126,11 +132,15 @@
 
         .navbar {
             align-items: center;
+            justify-content: space-between;
             background-color: var(--offwhite-background-color);
             padding: 10px 80px;
-            gap: 950px;
+            gap: 10px;
+            /* position:fixed;
+    right: 0;
+    left: 0;
+     */
         }
-
 
         .navlinks {
             align-items: center;
@@ -144,14 +154,13 @@
         }
 
 
-
         /* -----media queries---------- */
         @media screen and (max-width:479px) {
 
 
 
             h1 {
-                font-size: 2.3rem;
+                font-size: 2.2rem;
                 line-height: 2.3rem;
                 margin-bottom: 20px;
 
@@ -179,20 +188,21 @@
             }
 
             .navbar {
-                padding: 10px 33px 10px 25px;
+                align-items: center;
+                justify-content: space-between;
                 font-size: 14px;
-    gap: 90px;
+                padding: 10px 30px;
+
+
+
 
             }
 
-            .primary-button {
-                border-radius: 10px;
-            }
+
 
             .navlinks {
-                gap: 30px;
+                gap: 20px;
             }
-
 
             /* ---contact section------ */
 
@@ -215,7 +225,8 @@
             <div>
                 <ul class="navlinks flex">
                     <li><a href="index.html" class="hover-link">Home</a></li>
-                    <li><a href="#" class="hover-link contact-us-hover-button" style="color:var(--btn-color);">Contact Us</i></a></li>
+                    <li><a href="#" class="hover-link contact-us-hover-button" style="color:var(--btn-color);">Contact
+                            Us</i></a></li>
                 </ul>
             </div>
         </div>
