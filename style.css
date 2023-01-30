@@ -56,6 +56,10 @@ ul {
     color: rgb(112, 112, 112);
     transition: color 0.2s;
 }
+.hover-link1:hover{
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
 
 h1 {
     font-size: 5rem;
@@ -65,6 +69,7 @@ h1 {
 p {
     font-size: 2rem;
 }
+
 
 
 
@@ -553,6 +558,11 @@ p {
     align-items: center;
     justify-content: center;
 }
+.social-media-links img{
+    width: 27px;
+}
+
+
 
 .line {
     height: 3px;
@@ -566,7 +576,14 @@ p {
 
 
 
-/* @media screen and ( max-width: 756px) */
+@media screen and ( max-width: 1464px){
+    .header-image{
+        margin-left: -100px;
+    }
+    .header-text{
+        z-index: 1;
+    }
+}
 
 
 
