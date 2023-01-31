@@ -15,16 +15,326 @@
             font-family: 'Poppins', sans-serif;
         }
 
+        .privacy img{
+            width: 12px;
+        }
+
+        :root {
+            --background-color: #02044A;
+            --btn-color: #0C75FF;
+            --offwhite-background-color: #F9F9FB;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        a:active {
+            color: var(--btn-color);
+        }
+
+        ul {
+            list-style: none;
+
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 30px;
+        }
+
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+
+        /* ---contact section----- */
+
+        .contact-container a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 2px solid black;
+            border-radius: 60px;
+            color: black;
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .contact-container a:hover {
+            scale: 0.94;
+            color: var(--btn-color);
+            border: 2px solid var(--btn-color);
+            transition: scale 0.3s, border 0.3s, color 0.3s;
+        }
+
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 40px;
+            gap: 15px;
+
+        }
+
+        .contact-button i {
+            color: var(--btn-color);
+        }
+
+
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 60px;
+        }
+
+
+
+
+
+        /* -----css to support navbar from index.html----- */
+        .container {
+            overflow: hidden;
+            position: relative;
+
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .hover-link:hover {
+            color: rgb(112, 112, 112);
+            transition: color 0.2s;
+        }
+
+        .hover-link1:hover {
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        /* --------------nav bar------------ */
+        .company-logo img {
+            width: 200px;
+        }
+
+        .navbar {
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--offwhite-background-color);
+            padding: 10px 80px;
+            gap: 10px;
+            /* position:fixed;
+right: 0;
+left: 0;
+ */
+        }
+
+        .navlinks {
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .navlinks a {
+            color: black;
+            font-weight: 500;
+        }
+
+
+
+        /* ----footer------ */
+
+        .footer-container {
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: var(--background-color);
+            padding: 30px 120px;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+        }
+
+        .footer-container p {
+            font-size: 1rem;
+            font-weight: 500;
+
+        }
+
+        .footer-container a {
+            color: white;
+        }
+
+        .twickmedia {
+            color: white;
+        }
+
+        .footer-links {
+            gap: 70px;
+        }
+
+
+
+        .social-media-links {
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-media-links img {
+            width: 27px;
+        }
+
+        .line {
+            height: 3px;
+            width: 100%;
+            margin: 80px 0;
+            background-color: var(--offwhite-background-color);
+        }
+
+
+
+
+        /* -----media queries---------- */
+        @media screen and (max-width:479px) {
+
+
+
+            h1 {
+                font-size: 2.2rem;
+                line-height: 2.3rem;
+                margin-bottom: 20px;
+
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+
+            }
+
+            .contact-container a {
+                font-size: 1rem;
+            }
+
+
+
+            /* navbar---- */
+
+            .company-logo img {
+                width: 130px;
+            }
+
+            .navbar {
+                align-items: center;
+                justify-content: space-between;
+                font-size: 14px;
+                padding: 10px 30px;
+
+
+
+
+            }
+
+
+
+            .navlinks {
+                gap: 20px;
+            }
+
+            /* ---contact section------ */
+
+            .links {
+                flex-direction: column;
+            }
+
+
+
+
+
+
+            /* ---footer----- */
+
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 30px 10px;
+                text-align: center;
+            }
+
+            .footer-container a {
+                font-size: 14px;
+            }
+
+            .footer-links {
+                gap: 25px;
+            }
+
+
+        }
+
+
+
 
         @media screen and (max-width: 479px) {
-            .privacy{
+            .privacy {
                 padding: 50px 40px;
             }
+
+
+
+
         }
     </style>
 </head>
 
 <body>
+    <!-- -----navbar---------- -->
+    <div class="navbar flex">
+        <a href="index.html" class="company-logo flex">
+            <img src="images/earnow-logo.png" alt="">
+        </a>
+        <div>
+            <ul class="navlinks flex">
+                <li><a href="index.html" class="hover-link">Home</a></li>
+                <li><a href="contact_us.html" class="hover-link contact-us-hover-button">Contact
+                        Us</i></a></li>
+            </ul>
+        </div>
+    </div>
+
 
     <div class="privacy">
         <p>
@@ -106,36 +416,36 @@
             <br>
             <br>
 
-            Information Collected at the time of registration on Our Website
+            <img src="images/noun-dot-5449398.png"> Information Collected at the time of registration on Our Website
             When You register using Your web accounts, including, without limitation, Facebook or Google account, We
             retrieve the following Information from Your account(s) to continue to interact with You and to continue
             providing You the Services. Information that We collect includes, but not limited to –
             <br>
             <br>
 
-            First/Last Name <br>
-            E-mail id <br>
-            Mobile No. <br>
-            I.P. Address <br>
-            Public profile information (Facebook and Google) linking of social media accounts.
+           <img src="images/noun-dot-5449398.png"> First/Last Name <br>
+           <img src="images/noun-dot-5449398.png"> E-mail id <br>
+           <img src="images/noun-dot-5449398.png"> Mobile No. <br>
+           <img src="images/noun-dot-5449398.png"> I.P. Address <br>
+           <img src="images/noun-dot-5449398.png"> Public profile information (Facebook and Google) linking of social media accounts.
             <br>
             <br>
 
-            Information collected when You use Our Mobile Application
+            <img src="images/noun-dot-5449398.png"> Information collected when You use Our Mobile Application
             When You download Our mobile application We may collect, including but not limited to, the below information
             from You-
             <br>
             <br>
 
 
-            Email ID <br>
-            Mobile number <br>
-            Location/IP address for geo-locating <br> accurate up to 300 meters <br>
-            Device ID <br>
-            SMS for OTP <br>
+            <img src="images/noun-dot-5449398.png"> Email ID <br>
+            <img src="images/noun-dot-5449398.png"> Mobile number <br>
+            <img src="images/noun-dot-5449398.png"> Location/IP address for geo-locating <br> accurate up to <img src="images/noun-dot-5449398.png"> 300 meters <br>
+            <img src="images/noun-dot-5449398.png"> Device ID <br>
+            <img src="images/noun-dot-5449398.png"> SMS for OTP <br>
             <br>
 
-            Information You provide to Us voluntarily
+            <img src="images/noun-dot-5449398.png"> Information You provide to Us voluntarily
             <br>
             <br>
 
@@ -156,7 +466,7 @@
             Information automatically collected while browsing/navigating through the Website<br>
             <br>
 
-            Cookies <br>
+            <img src="images/noun-dot-5449398.png"> Cookies <br>
 
             The Website / Mobile App uses cookies and other similar technologies which are necessary to its functioning
             and to provide Earnow Cashback Services. Some of these cookies are essential for us to provide you with the
@@ -177,7 +487,7 @@
 
 
             Inferred Information through usage and log data <br>
-            We may track certain information about You based upon Your behaviour while You avail the Services. We use
+            <img src="images/noun-dot-5449398.png"> We may track certain information about You based upon Your behaviour while You avail the Services. We use
             this information for conducting internal research on our Users’ demographics, devices, interests, and
             behaviour to better understand, protect and serve Our Users.<br>
             <br>
@@ -188,10 +498,10 @@
             <br>
 
 
-            To evaluate Your interest for various genres of content, services, offers;<br>
+            <img src="images/noun-dot-5449398.png"> To evaluate Your interest for various genres of content, services, offers;<br>
             <br>
 
-            To perform analytics and conduct customer research, to determine Your interest, for identifying content that
+            <img src="images/noun-dot-5449398.png"> To perform analytics and conduct customer research, to determine Your interest, for identifying content that
             generate sales and to analyse traffic patterns.<br>
             <br>
 
@@ -207,7 +517,7 @@
 
 
             Information We collect from third parties <br> <br>
-            Information obtained from other Sources <br>
+            <img src="images/noun-dot-5449398.png"> Information obtained from other Sources <br>
             We may receive information about You from other online sources. We may add it to Our account information
             system and treat it in accordance with this Policy. We may reference other sources of demographic and other
             information in order to provide you with more targeted communications and promotions. We use Google
@@ -219,20 +529,20 @@
             <br>
 
 
-            Information obtained from Third party websites <br>
+            <img src="images/noun-dot-5449398.png"> Information obtained from Third party websites <br>
             If You link, connect or login to Your Earnow account (if any) with third-party services they may send Us
             information such as Your registered e-mail id and public profile information from such third-party services,
             the indicative list of which is provided below;<br>
             <br>
 
 
-            Facebook – Email ID and public profile information which includes name, profile picture, age gender etc.<br>
+            <img src="images/noun-dot-5449398.png"> Facebook – Email ID and public profile information which includes name, profile picture, age gender etc.<br>
             <br>
 
-            Google –Email id, language preference and age<br>
+            <img src="images/noun-dot-5449398.png"> Google –Email id, language preference and age<br>
             <br>
 
-            Demographic and other information <br>
+            <img src="images/noun-dot-5449398.png"> Demographic and other information <br>
             <br>
 
             We may reference other sources of demographic and other information in order to provide You with more
@@ -251,7 +561,7 @@
             Service Providers<br>
             <br>
 
-            The Application may include links to other websites or applications (for e.g., links to online stores for
+            <img src="images/noun-dot-5449398.png"> The Application may include links to other websites or applications (for e.g., links to online stores for
             shopping). Such websites or applications are governed by their respective privacy policies, which are beyond
             Our control. Once You leave Our servers (You can tell where You are by checking the URL in the location bar
             on Your browser), use of any information You provide is governed by the privacy policy of the operator of
@@ -264,7 +574,7 @@
             Legal<br>
             <br>
 
-            In the event Earnow Cashback Services is merged with or acquired by another company or in case of
+            <img src="images/noun-dot-5449398.png"> In the event Earnow Cashback Services is merged with or acquired by another company or in case of
             re-organization or re-structuring of business, We and Our affiliates may share Your personal information,
             wholly or in part, with another business entity. We may also disclose Your personal information to third
             parties in order to enforce or apply Our Terms of Service, or any other agreement or to respond to any
@@ -276,7 +586,7 @@
             Business transfers<br>
             <br>
 
-            We provide personal information to Our affiliates and other trusted businesses or persons to process it for
+            <img src="images/noun-dot-5449398.png"> We provide personal information to Our affiliates and other trusted businesses or persons to process it for
             Us, based on Our instructions and in compliance with Our Privacy Policy and any other appropriate
             confidentiality and security measures. For example, We may use service providers to help Us with customer
             support.<br>
@@ -316,39 +626,39 @@
             <br>
 
 
-            Analyse and understand Our audience, improve Our services (including Our user interface experiences),
+            <img src="images/noun-dot-5449398.png"> Analyse and understand Our audience, improve Our services (including Our user interface experiences),
             recommendation algorithms and delivery which may require sharing personal information with Our group
             companies and affiliates or third-party service providers;<br>
             <br>
 
-            Determine Your account requirements and provide personalized suggestions, tips and recommendations, if
+            <img src="images/noun-dot-5449398.png"> Determine Your account requirements and provide personalized suggestions, tips and recommendations, if
             any;<br>
             <br>
 
-            Provide You with interactive features through Our Service (for e.g., registering for campaigns/ contests on
+            <img src="images/noun-dot-5449398.png"> Provide You with interactive features through Our Service (for e.g., registering for campaigns/ contests on
             Our websites);<br>
             <br>
 
-            To help advertisers understand Our audience and confirm the value of advertising on Our Websites (however it
+            <img src="images/noun-dot-5449398.png"> To help advertisers understand Our audience and confirm the value of advertising on Our Websites (however it
             is usually in the form of aggregated statistics on traffic to various pages within Our Website) and to
             provide You relevant advertisements; <br>
             <br>
 
-            Communicate with You concerning Our Service (for example by email, push notifications), so that We can send
+            <img src="images/noun-dot-5449398.png"> Communicate with You concerning Our Service (for example by email, push notifications), so that We can send
             You news about Earnow Cashback Services , details about new features and content available on the Websites,
             Mobile Apps, promotional announcements, and surveys, and to assist You with operational requests such as
             password reset requests;<br>
             <br>
 
-            Notify You about changes in Terms & Conditions and this Policy ;<br>
+            <img src="images/noun-dot-5449398.png"> Notify You about changes in Terms & Conditions and this Policy ;<br>
             <br>
 
-            Allow You to participate in interactive features offered through Our WebsiteSharing with Our customer
+            <img src="images/noun-dot-5449398.png"> Allow You to participate in interactive features offered through Our WebsiteSharing with Our customer
             support team, Data Protection Officer, data subject rights team and/or breach response team to resolve any
             incidents and/or Your queries/concerns related to Your rights or Services provided to You.;<br>
             <br>
 
-            Sharing with Our customer support team, Data Protection Officer, data subject rights team and/or breach
+            <img src="images/noun-dot-5449398.png"> Sharing with Our customer support team, Data Protection Officer, data subject rights team and/or breach
             response team to resolve any incidents and/or Your queries/concerns related to Your rights or Services
             provided to You.<br>
             <br>
@@ -393,14 +703,14 @@
             <br>
 
 
-            When it is requested or required by law or by any court or governmental agency or authority to disclose, for
+            <img src="images/noun-dot-5449398.png"> When it is requested or required by law or by any court or governmental agency or authority to disclose, for
             the purpose of verification of identity, or for the prevention, detection, investigation including cyber
             incidents, or for prosecution and punishment of offences. These disclosures are made in good faith and
             belief that such disclosure is reasonably necessary for enforcing these Terms or for complying with the
             applicable laws and regulations.<br>
             <br>
 
-            The Company proposes to share such information within its group companies and officers and employees of such
+            <img src="images/noun-dot-5449398.png"> The Company proposes to share such information within its group companies and officers and employees of such
             group companies for the purpose of processing personal information on its behalf. We also ensure that these
             recipients of such information agree to process such information based on Our instructions and in compliance
             with this Policy and any other appropriate confidentiality and security measures.<br>
@@ -428,7 +738,7 @@
             Accessing and rectifying Your personal information<br>
             <br>
 
-            When You use the Services Website/application (or any of its sub sites), We make good faith efforts to
+            <img src="images/noun-dot-5449398.png"> When You use the Services Website/application (or any of its sub sites), We make good faith efforts to
             provide You, as and when requested by You, with access to Your personal information and shall further ensure
             that any personal information or sensitive personal data or information found to be inaccurate or deficient
             shall be corrected or amended as feasible. We ask individual users to identify themselves and the
@@ -450,18 +760,18 @@
             <br>
 
 
-            Concerning Your login credentials by editing the same through Profile & Settings section. The same shall be
+            <img src="images/noun-dot-5449398.png"> Concerning Your login credentials by editing the same through Profile & Settings section. The same shall be
             reflected across all properties.<br>
             <br>
 
-            Concerning details that are separately collected and maintained by RealCash, by sending an e-mail to Our
+            <img src="images/noun-dot-5449398.png"> Concerning details that are separately collected and maintained by RealCash, by sending an e-mail to Our
             support team at enquiry@realcashapp.in to perform the rectification.<br>
             <br>
 
             Data Portability<br>
             <br>
 
-            You may also be entitled to request copies of personal information that You have provided to Us in a
+            <img src="images/noun-dot-5449398.png"> You may also be entitled to request copies of personal information that You have provided to Us in a
             structured, commonly used, and machine-readable format; wherever feasible. If You are registered on the
             Website , then you can request for a copy of this information by writing to Us at contact@earnow.in<br>
             <br>
@@ -470,14 +780,14 @@
             Data Retention and Erasure<br>
             <br>
 
-            We retain Your personal information as long as necessary for Us to provide Services to You, to comply with
+            <img src="images/noun-dot-5449398.png"> We retain Your personal information as long as necessary for Us to provide Services to You, to comply with
             the applicable laws or till You ask Us to not retain Your data. If You no longer want Us to use Your
             information, then You can request that We erase Your personal information and close Your Website account.
             Please note that if You request for the erasure of Your personal information;<br>
             <br>
 
 
-            We may retain some of Your personal information as necessary for Our legitimate business interests, such as
+            <img src="images/noun-dot-5449398.png"> We may retain some of Your personal information as necessary for Our legitimate business interests, such as
             fraud detection and prevention and enhancing safety. For example, if We suspend the Website account for
             fraud or safety reasons, We may retain certain information from that account to prevent that user from
             opening a new account in the future.
@@ -486,13 +796,13 @@
             obligations.<br>
             <br>
 
-            Information You have shared with others (e.g., Reviews, forum postings) may continue to be publicly visible
+            <img src="images/noun-dot-5449398.png"> Information You have shared with others (e.g., Reviews, forum postings) may continue to be publicly visible
             on the Website, even after Your account is cancelled. However, attribution of such information to You will
             be removed. Additionally, some copies of Your information (e.g., log records) may remain in Our database,
             but are disassociated from personal identifiers.<br>
             <br>
 
-            Because We maintain copies of personal information to protect from accidental or malicious loss and
+            <img src="images/noun-dot-5449398.png"> Because We maintain copies of personal information to protect from accidental or malicious loss and
             destruction, residual copies may take a period of time before they are deleted from Our active servers and
             may remain in Our backup systems.<br>
             <br>
@@ -507,7 +817,7 @@
             Withdrawing Consent and Restriction of Processing<br>
             <br>
 
-            For withdrawing Your consent at any time during the tenure of Your services with Us, You may choose to do so
+            <img src="images/noun-dot-5449398.png"> For withdrawing Your consent at any time during the tenure of Your services with Us, You may choose to do so
             by sending Us an e-mail. We shall review Your request and may ask You to verify Your identity. Post
             verification We will withdraw the consent for which request was made by You and stop any further processing
             of Your personal information.<br>
@@ -517,7 +827,7 @@
             Objection to Processing<br>
             <br>
 
-            Where Your personal information is processed for direct marketing purposes or any contests or promotions or
+            <img src="images/noun-dot-5449398.png"> Where Your personal information is processed for direct marketing purposes or any contests or promotions or
             other services, You may, at any time ask Us to cease processing Your data for these direct marketing
             purposes by sending an e-mail to Us.<br>
             <br>
@@ -551,7 +861,7 @@
             Complaints<br>
             <br>
 
-            You can write to Us in case of any grievance or compliant at the support e-mail address. If You have any
+            <img src="images/noun-dot-5449398.png"> You can write to Us in case of any grievance or compliant at the support e-mail address. If You have any
             complaints regarding processing of Your personal information You may contact Our data protection officer at
             the below mentioned e-mail address. You have the right to complaint about the data processing activities
             carried out by Earnow before the competent data protection authorities.<br>
@@ -699,7 +1009,7 @@
             Collection and Use of Personal Information<br>
             <br>
 
-            Information Collected at the time of registration on Our Website<br>
+            <img src="images/noun-dot-5449398.png"> Information Collected at the time of registration on Our Website<br>
             <br>
 
             When You register using Your web accounts, including, without limitation, Facebook or Google account, We
@@ -708,12 +1018,12 @@
             <br>
 
 
-            First/Last Name <br>
-            E-mail id <br>
-            Mobile No. <br>
-            I.P. Address <br>
-            Public profile information (Facebook and Google) linking of social media accounts. <br>
-            Information collected when You use Our Mobile Application<br>
+            <img src="images/noun-dot-5449398.png"> First/Last Name <br>
+            <img src="images/noun-dot-5449398.png"> E-mail id <br>
+            <img src="images/noun-dot-5449398.png"> Mobile No. <br>
+            <img src="images/noun-dot-5449398.png"> I.P. Address <br>
+            <img src="images/noun-dot-5449398.png"> Public profile information (Facebook and Google) linking of social media accounts. <br>
+            <img src="images/noun-dot-5449398.png"> Information collected when You use Our Mobile Application<br>
             <br>
 
             When You download Our mobile application We may collect, including but not limited to, the below information
@@ -721,12 +1031,12 @@
             <br>
 
 
-            Email ID <br>
-            Mobile number <br>
-            Location/IP address for geo-locating accurate up to 300 meters <br>
-            Device ID <br>
-            SMS for OTP <br>
-            Information You provide to Us voluntarily<br>
+            <img src="images/noun-dot-5449398.png"> Email ID <br>
+            <img src="images/noun-dot-5449398.png"> Mobile number <br>
+            <img src="images/noun-dot-5449398.png"> Location/IP address for geo-locating accurate <img src="images/noun-dot-5449398.png"> up to 300 meters <br>
+            <img src="images/noun-dot-5449398.png"> Device ID <br>
+            <img src="images/noun-dot-5449398.png"> SMS for OTP <br>
+            <img src="images/noun-dot-5449398.png"> Information You provide to Us voluntarily<br>
             <br>
 
             If You send Us personal correspondence, such as emails or letters, or if other users or third parties send
@@ -746,7 +1056,7 @@
             Information automatically collected while browsing/navigating through the Website<br>
             <br>
 
-            Cookies<br>
+            <img src="images/noun-dot-5449398.png"> Cookies<br>
             <br>
 
 
@@ -773,7 +1083,7 @@
             Inferred Information through usage and log data<br>
             <br>
 
-            We may track certain information about You based upon Your behaviour while You avail the Services. We use
+            <img src="images/noun-dot-5449398.png"> We may track certain information about You based upon Your behaviour while You avail the Services. We use
             this information for conducting internal research on our Users’ demographics, devices, interests, and
             behaviour to better understand, protect and serve Our Users.<br>
             <br>
@@ -784,10 +1094,10 @@
             <br>
             <br>
 
-            To evaluate Your interest for various genres of content, services, offers;<br>
+            <img src="images/noun-dot-5449398.png"> To evaluate Your interest for various genres of content, services, offers;<br>
             <br>
 
-            To perform analytics and conduct customer research, to determine Your interest, for identifying content that
+            <img src="images/noun-dot-5449398.png"> To perform analytics and conduct customer research, to determine Your interest, for identifying content that
             generate sales and to analyse traffic patterns.<br>
             <br>
 
@@ -805,7 +1115,7 @@
             Information We collect from third parties<br>
             <br>
 
-            Information obtained from other Sources<br>
+            <img src="images/noun-dot-5449398.png"> Information obtained from other Sources<br>
             <br>
 
             We may receive information about You from other online sources. We may add it to Our account information
@@ -819,7 +1129,7 @@
             <br>
 
 
-            Information obtained from Third party websites<br>
+            <img src="images/noun-dot-5449398.png"> Information obtained from Third party websites<br>
             <br>
 
             If You link, connect or login to Your Earnow account (if any) with third-party services they may send Us
@@ -828,13 +1138,13 @@
             <br>
 
 
-            Facebook – Email ID and public profile information which includes name, profile picture, age gender etc.<br>
+            <img src="images/noun-dot-5449398.png"> Facebook – Email ID and public profile information which includes name, profile picture, age gender etc.<br>
             <br>
 
-            Google –Email id, language preference and age<br>
+            <img src="images/noun-dot-5449398.png"> Google –Email id, language preference and age<br>
             <br>
 
-            Demographic and other information<br>
+            <img src="images/noun-dot-5449398.png"> Demographic and other information<br>
             <br>
 
             We may reference other sources of demographic and other information in order to provide You with more
@@ -853,7 +1163,7 @@
             Service <br>
             <br>
 
-            The Application may include links to other websites or applications (for e.g., links to online stores for
+            <img src="images/noun-dot-5449398.png"> The Application may include links to other websites or applications (for e.g., links to online stores for
             shopping). Such websites or applications are governed by their respective privacy policies, which are beyond
             Our control. Once You leave Our servers (You can tell where You are by checking the URL in the location bar
             on Your browser), use of any information You provide is governed by the privacy policy of the operator of
@@ -866,7 +1176,7 @@
             Legal<br>
             <br>
 
-            In the event Earnow Cashback Services is merged with or acquired by another company or in case of
+            <img src="images/noun-dot-5449398.png"> In the event Earnow Cashback Services is merged with or acquired by another company or in case of
             re-organization or re-structuring of business, We and Our affiliates may share Your personal information,
             wholly or in part, with another business entity. We may also disclose Your personal information to third
             parties in order to enforce or apply Our Terms of Service, or any other agreement or to respond to any
@@ -878,7 +1188,7 @@
             Business transfers<br>
             <br>
 
-            We provide personal information to Our affiliates and other trusted businesses or persons to process it for
+            <img src="images/noun-dot-5449398.png"> We provide personal information to Our affiliates and other trusted businesses or persons to process it for
             Us, based on Our instructions and in compliance with Our Privacy Policy and any other appropriate
             confidentiality and security measures. For example, We may use service providers to help Us with customer
             support.
@@ -920,37 +1230,37 @@
             <br>
 
 
-            Analyse and understand Our audience, improve Our services (including Our user interface experiences),
+            <img src="images/noun-dot-5449398.png"> Analyse and understand Our audience, improve Our services (including Our user interface experiences),
             recommendation algorithms and delivery which may require sharing personal information with Our group
             companies and affiliates or third-party service providers;<br>
             <br>
 
-            Determine Your account requirements and provide personalized suggestions, tips and recommendations, if
+            <img src="images/noun-dot-5449398.png"> Determine Your account requirements and provide personalized suggestions, tips and recommendations, if
             any;<br>
             <br>
 
-            Provide You with interactive features through Our Service (for e.g., registering for campaigns/ contests on
+            <img src="images/noun-dot-5449398.png"> Provide You with interactive features through Our Service (for e.g., registering for campaigns/ contests on
             Our websites);<br>
             <br>
 
-            To help advertisers understand Our audience and confirm the value of advertising on Our Websites (however it
+            <img src="images/noun-dot-5449398.png"> To help advertisers understand Our audience and confirm the value of advertising on Our Websites (however it
             is usually in the form of aggregated statistics on traffic to various pages within Our Website) and to
             provide You relevant advertisements;<br>
             <br>
 
-            Communicate with You concerning Our Service (for example by email, push notifications), so that We can send
+            <img src="images/noun-dot-5449398.png"> Communicate with You concerning Our Service (for example by email, push notifications), so that We can send
             You news about Earnow Cashback Services , details about new features and content available on the Websites,
             Mobile Apps, promotional announcements, and surveys, and to assist You with operational requests such as
             password reset requests;<br>
             <br>
 
-            Notify You about changes in Terms & Conditions and this Policy ;<br>
+            <img src="images/noun-dot-5449398.png"> Notify You about changes in Terms & Conditions and this Policy ;<br>
             <br>
 
-            Allow You to participate in interactive features offered through Our WebsiteSharing with Our customer
+            <img src="images/noun-dot-5449398.png"> Allow You to participate in interactive features offered through Our WebsiteSharing with Our customer
             support team, Data Protection Officer, data subject rights team and/or breach response team to resolve any
             incidents and/or Your queries/concerns related to Your rights or Services provided to You.;
-            Sharing with Our customer support team, Data Protection Officer, data subject rights team and/or breach
+            <img src="images/noun-dot-5449398.png"> Sharing with Our customer support team, Data Protection Officer, data subject rights team and/or breach
             response team to resolve any incidents and/or Your queries/concerns related to Your rights or Services
             provided to You.<br>
             <br>
@@ -995,14 +1305,14 @@
             <br>
 
 
-            When it is requested or required by law or by any court or governmental agency or authority to disclose, for
+            <img src="images/noun-dot-5449398.png"> When it is requested or required by law or by any court or governmental agency or authority to disclose, for
             the purpose of verification of identity, or for the prevention, detection, investigation including cyber
             incidents, or for prosecution and punishment of offences. These disclosures are made in good faith and
             belief that such disclosure is reasonably necessary for enforcing these Terms or for complying with the
             applicable laws and regulations.<br>
             <br>
 
-            The Company proposes to share such information within its group companies and officers and employees of such
+            <img src="images/noun-dot-5449398.png"> The Company proposes to share such information within its group companies and officers and employees of such
             group companies for the purpose of processing personal information on its behalf. We also ensure that these
             recipients of such information agree to process such information based on Our instructions and in compliance
             with this Policy and any other appropriate confidentiality and security measures.<br>
@@ -1030,7 +1340,7 @@
             Accessing and rectifying Your personal information<br>
             <br>
 
-            When You use the Services Website/application (or any of its sub sites), We make good faith efforts to
+            <img src="images/noun-dot-5449398.png"> When You use the Services Website/application (or any of its sub sites), We make good faith efforts to
             provide You, as and when requested by You, with access to Your personal information and shall further ensure
             that any personal information or sensitive personal data or information found to be inaccurate or deficient
             shall be corrected or amended as feasible. We ask individual users to identify themselves and the
@@ -1052,18 +1362,18 @@
             <br>
 
 
-            Concerning Your login credentials by editing the same through Profile & Settings section. The same shall be
+            <img src="images/noun-dot-5449398.png"> Concerning Your login credentials by editing the same through Profile & Settings section. The same shall be
             reflected across all properties.<br>
             <br>
 
-            Concerning details that are separately collected and maintained by RealCash, by sending an e-mail to Our
+            <img src="images/noun-dot-5449398.png"> Concerning details that are separately collected and maintained by RealCash, by sending an e-mail to Our
             support team at enquiry@realcashapp.in to perform the rectification.<br>
             <br>
 
             Data Portability<br>
             <br>
 
-            You may also be entitled to request copies of personal information that You have provided to Us in a
+            <img src="images/noun-dot-5449398.png"> You may also be entitled to request copies of personal information that You have provided to Us in a
             structured, commonly used, and machine-readable format; wherever feasible. If You are registered on the
             Website , then you can request for a copy of this information by writing to Us at contact@earnow.in<br>
             <br>
@@ -1072,31 +1382,31 @@
             Data Retention and Erasure<br>
             <br>
 
-            We retain Your personal information as long as necessary for Us to provide Services to You, to comply with
+            <img src="images/noun-dot-5449398.png"> We retain Your personal information as long as necessary for Us to provide Services to You, to comply with
             the applicable laws or till You ask Us to not retain Your data. If You no longer want Us to use Your
             information, then You can request that We erase Your personal information and close Your Website account.
             Please note that if You request for the erasure of Your personal information;<br>
             <br>
 
 
-            We may retain some of Your personal information as necessary for Our legitimate business interests, such as
+            <img src="images/noun-dot-5449398.png"> We may retain some of Your personal information as necessary for Our legitimate business interests, such as
             fraud detection and prevention and enhancing safety. For example, if We suspend the Website account for
             fraud or safety reasons, We may retain certain information from that account to prevent that user from
             opening a new account in the future.<br>
             <br>
 
-            We may retain and use Your personal information to the extent necessary to comply with Our legal
+            <img src="images/noun-dot-5449398.png"> We may retain and use Your personal information to the extent necessary to comply with Our legal
             obligations. For example, We may keep some of Your information for tax, legal reporting and auditing
             obligations.<br>
             <br>
 
-            Information You have shared with others (e.g., Reviews, forum postings) may continue to be publicly visible
+            <img src="images/noun-dot-5449398.png"> Information You have shared with others (e.g., Reviews, forum postings) may continue to be publicly visible
             on the Website, even after Your account is cancelled. However, attribution of such information to You will
             be removed. Additionally, some copies of Your information (e.g., log records) may remain in Our database,
             but are disassociated from personal identifiers.<br>
             <br>
 
-            Because We maintain copies of personal information to protect from accidental or malicious loss and
+            <img src="images/noun-dot-5449398.png"> Because We maintain copies of personal information to protect from accidental or malicious loss and
             destruction, residual copies may take a period of time before they are deleted from Our active servers and
             may remain in Our backup systems.<br>
             <br>
@@ -1111,7 +1421,7 @@
             Withdrawing Consent and Restriction of Processing<br>
             <br>
 
-            For withdrawing Your consent at any time during the tenure of Your services with Us, You may choose to do so
+            <img src="images/noun-dot-5449398.png"> For withdrawing Your consent at any time during the tenure of Your services with Us, You may choose to do so
             by sending Us an e-mail. We shall review Your request and may ask You to verify Your identity. Post
             verification We will withdraw the consent for which request was made by You and stop any further processing
             of Your personal information.<br>
@@ -1121,7 +1431,7 @@
             Objection to Processing<br>
             <br>
 
-            Where Your personal information is processed for direct marketing purposes or any contests or promotions or
+            <img src="images/noun-dot-5449398.png"> Where Your personal information is processed for direct marketing purposes or any contests or promotions or
             other services, You may, at any time ask Us to cease processing Your data for these direct marketing
             purposes by sending an e-mail to Us.<br>
             <br>
@@ -1155,7 +1465,7 @@
             Complaints<br>
             <br>
 
-            You can write to Us in case of any grievance or compliant at the support e-mail address. If You have any
+            <img src="images/noun-dot-5449398.png"> You can write to Us in case of any grievance or compliant at the support e-mail address. If You have any
             complaints regarding processing of Your personal information You may contact Our data protection officer at
             the below mentioned e-mail address. You have the right to complaint about the data processing activities
             carried out by Earnow before the competent data protection authorities.<br>
@@ -1222,9 +1532,33 @@
 
             Contact Us:
             <a style="text-decoration:none;" href="mailto:contact@earnow.in">contact@earnow.in</a>
+
+            
         </p>
     </div>
-
+    
+                <!-- ---footer- section------ -->
+    
+            <div class="footer-container flex">
+                <div class="twickmedia">
+                    <p>TWICK MEDIA PVT LTD</p>
+                </div>
+                <div class="footer-links flex">
+                    <a class="hover-link1" href="#">Privacy Policy</a>
+                    <a class="hover-link1" href="contact_us.html">Customer Support</a>
+                    <a class="hover-link1" href="index.html">Get App</a>
+                </div>
+                <div class="social-media-links flex">
+                    <a href="https://www.instagram.com/earnow.in/" target="_blank" class="hover-link1"><img
+                            src="images/icons8-instagram.svg" alt=""></a>
+                    <a href="https://www.linkedin.com/company/earnow/" target="_blank" class="hover-link1"><img
+                            src="images/icons8-linkedin.svg" alt=""></a>
+                    <a href="https://www.youtube.com/@earnow6535" target="_blank" class="hover-link1"> <img
+                            src="images/icons8-youtube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/11f5791e9d.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
